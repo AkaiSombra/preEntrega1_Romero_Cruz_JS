@@ -1,4 +1,44 @@
+let decision = prompt("Que desea hacer? \n1.Calcular el promedio de edad de 3 personas \n2.Usar el conversor de divisas?")
+
+if (decision == 1){
+
 ///////////////////////////////////////////////////////////
+
+let nombreUno = null
+
+let edadUno = null
+
+let nombreDos = null
+
+let edadDos = null
+
+let nombreTres = null
+
+let edadTres = null
+
+///////////////////////////////////////////////////////////
+
+nombreUno = prompt("Ingresar nombre")
+
+edadUno = parseInt(prompt("Ingresar la edad de " + nombreUno))
+
+nombreDos = prompt("Ingresar nombre")
+
+edadDos = parseInt(prompt("Ingresas la edad de " + nombreDos))
+
+nombreTres = prompt("Ingersar nombre")
+
+edadTres = parseInt(prompt("Ingresar la edad de " + nombreTres))
+
+let edadSuma = edadUno + edadDos + edadTres
+
+let promedioEdad = () => edadSuma / 3 
+
+document.write("La edad promedio entre " + nombreUno + ", " + " " + nombreDos + " y " + nombreTres + " es " + parseInt(promedioEdad()) + " años.")
+
+}else if (decision == 2){
+
+////////////////////////////////////////////////////////////
 
 let monedaPrincipal = null
 
@@ -81,4 +121,7 @@ if(monedaPrincipal == "COP" && monedaSecundaria == "USD"){
 
 }else if (monedaPrincipal || monedaSecundaria !== String){
     document.write("Conversion no disponible")
+}
+}else{
+    alert("Request not valid")
 }
